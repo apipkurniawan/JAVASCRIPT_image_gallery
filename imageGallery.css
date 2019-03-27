@@ -1,0 +1,44 @@
+/* menghilangkan seluruh margin dan paddingnya */
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 0; /* menghilangkan line height pada gambar */
+}
+
+body {
+	background-color: #ccc;
+	text-align: center;
+}
+
+.container {
+	width: 600px;
+	margin: 10px auto;
+	border: 5px solid white;
+	overflow: auto; /* menghilangkan float */
+}
+.thumb {
+	width: 200px;
+	float: left;
+	border: 2px solid white;
+	box-sizing: border-box; /* agar tidak memperdulikan bordernya */
+}
+.thumb:hover {
+	opacity: 0.5; /* menjadikan warna transparant */
+	cursor: pointer; /* mengubah cursor menjadi pointer */
+}
+
+
+/* membuat animasi menggunakan css 3 */
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+.fade {
+	opacity: 0;
+	animation: fadeIn 0.5s forwards;
+}
+
+.active {
+	opacity: 0.5;
+}
